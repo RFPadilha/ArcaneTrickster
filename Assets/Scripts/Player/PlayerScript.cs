@@ -191,7 +191,8 @@ public class PlayerScript : MonoBehaviour
 
     void Update()//atualiza comandos de movimento o mais rápido possível
     {
-        if (Input.GetKeyDown(KeyCode.I)) inventoryUI.SetActive(!inventoryUI.activeSelf);//toggle inventory
+        //toggle inventory, made for a future programmer that would use this code
+        //if (Input.GetKeyDown(KeyCode.I)) inventoryUI.SetActive(!inventoryUI.activeSelf);
 
 
         moveX = Input.GetAxisRaw("Horizontal");//receives directional inputs
