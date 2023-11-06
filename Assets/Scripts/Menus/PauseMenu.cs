@@ -64,7 +64,10 @@ public class PauseMenu : MonoBehaviour
     public void Reload()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);//controle de cenas foi movido para o script "UIManager"
-        FindObjectOfType<MapGenAutomata>().RespawnPlayer();
+        if (!(SceneManager.GetActiveScene().name == "Game"))
+        {
+            FindObjectOfType<MapGenAutomata>().RespawnPlayer();
+        }
         Resume();
     }
     public void QuitGame()

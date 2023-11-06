@@ -330,12 +330,5 @@ public class NecroBoss : MonoBehaviour
 
         Time.timeScale = 1;//despausa jogo após seleção
         StartCoroutine(uiManager.FadeOut("Game", true, 1));//retorna para a cena da cidade inicial
-        StartCoroutine(WaitToDie(2));
     }
-    IEnumerator WaitToDie(int secs)
-    {
-        yield return new WaitForSeconds(secs);
-        Destroy(gameObject);//destroi gameObject do inimigo após um curto tempo de espera para garantir bom funcionamento das execuções em progresso
-    }
-
 }

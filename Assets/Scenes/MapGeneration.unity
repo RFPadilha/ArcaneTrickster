@@ -943,6 +943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 957413459}
+  scale: 1
 --- !u!114 &463108195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4711,7 +4712,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 20
-      m_TileSpriteIndex: 20
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4801,7 +4802,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 19
-      m_TileSpriteIndex: 19
+      m_TileSpriteIndex: 20
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7194,12 +7195,12 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 39806182, guid: d55f252e5bbb7f847acc2fdfbbe483a8, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -2065841209, guid: d55f252e5bbb7f847acc2fdfbbe483a8, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 288
     m_Data: {fileID: 2132166247, guid: d55f252e5bbb7f847acc2fdfbbe483a8, type: 3}
   m_TileMatrixArray:
@@ -9616,6 +9617,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248544364503358287, guid: 876e1f90786009e468d47bbcf553b255,
+        type: 3}
+      propertyPath: isBoss
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 876e1f90786009e468d47bbcf553b255, type: 3}

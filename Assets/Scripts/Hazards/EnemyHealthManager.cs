@@ -28,6 +28,7 @@ public class EnemyHealthManager : MonoBehaviour
     PlayerScript playerRef;
     CameraController camControl;
     bool loadedPlayer = false;
+    public bool isBoss = false;
 
     //efeitos visuais
     public GameObject hitFX;
@@ -94,16 +95,16 @@ public class EnemyHealthManager : MonoBehaviour
     public void HurtEnemy(int damage)
     {
         //gamefeel code
+        currentHealth -= damage;//decrementa vida
         GetHitVFX();//efeito visual de atingir
         audioManager.PlayUnrestricted("PlayerHit");//efeito sonoro
-        if (GetComponent<NecroBoss>())
+        if (isBoss)
         {
             GetComponent<NecroBoss>().UpdateHealthBar();
         }//se é o único "chefe" implementado até o momento, atualiza UI da barra de vida
 
         //game mechanics
         huntPlayer = true;
-        currentHealth -= damage;//decrementa vida
         if (currentHealth <= 0 && !gameObject.GetComponent<NecroBoss>())//para um inimigo simples, somente experiência e devolver munição após a morte
         {
             playerRef.DefeatEnemy(experienceGiven);
